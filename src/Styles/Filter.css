@@ -1,0 +1,96 @@
+.filter-results-container {
+    height: 100px;
+    padding: 64px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+.filter-input {
+    position: relative;
+}
+.filter-input input {
+    width: 350px;
+    height: 50px;
+    padding: 12px 12px 12px 40px;
+    font-size: 16px;
+    color: var(--text-color);
+    background-color: var(--nav-bg-color);
+    box-shadow: 2px 2px 2px var(--btn-hover), -2px -2px 2px var(--btn-hover), 2px -2px 2px var(--btn-hover), -2px 2px 2px var(--btn-hover);
+    border: 1px solid transparent;
+    border-radius: 6px;
+    outline: transparent;
+    letter-spacing: .6px;
+}
+#searchIcon {
+    position: absolute;
+    top: 16px;
+    left: 14px;
+    color: var(--text-color);
+    font-size: 18px;
+}
+/* Style for the custom dropdown container */
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+/* Style for the selected option */
+.selected-option {
+    width: 150px;
+    padding: 10px;
+    border: 1px solid var(--btn-hover);
+    background-color: var(--nav-bg-color);
+    border-radius: 6px;
+    text-align: center;
+}
+/* Style for the options container */
+.options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: none;
+    border: 1px solid var(--btn-hover);
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    background-color: var(--nav-bg-color);
+    z-index: 1;
+}
+/* Style for each option in the dropdown */
+.options li {
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+/* Hover effect for options */
+.options li:hover {
+   background-color: var(--bg-color);
+}
+/* Show the options when the dropdown is clicked */
+.custom-dropdown:hover .options {
+    display: block;
+}
+/* Style for the selected option when the dropdown is open */
+.custom-dropdown:hover .selected-option {
+    border-radius: 6px 6px 0 0;
+    border-bottom: none;
+}
+/* Responsive */
+@media screen and (max-width: 678px) {
+    .filter-results-container {
+        height: auto;
+        padding: 40px 16px;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 24px;
+    }
+    .filter-input, .filter-input input {
+        width: 100%;
+    }
+}
