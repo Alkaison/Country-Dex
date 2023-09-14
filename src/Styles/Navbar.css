@@ -12,16 +12,23 @@
     letter-spacing: .5px;
 }
 .navbar-btn {
-    padding: 8px 12px;
+    padding: 10px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
     border: 1px solid transparent;
-    border: 6px;
+    border-radius: 10px;
     outline: transparent;
     color: var(--text-color);
     background-color: var(--nav-bg-color);
     font-size: 18px;
-    font-family: Verdana, sans-serif;
+    font-weight: 600;
     letter-spacing: .4px;
     cursor: pointer;
+}
+.navbar-btn:hover {
+    background-color: var(--btn-hover);
 }
 /* Responsive */
 @media screen and (max-width: 678px) {

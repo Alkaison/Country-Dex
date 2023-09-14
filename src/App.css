@@ -21,10 +21,12 @@ body {
     --bg-color: #202D36;
     --nav-bg-color: #2B3743;
     --nav-shadow-color: #1E2B34;
+    --btn-hover: #202D36;
 }
 .lightMode {
     --text-color: #000000;
     --bg-color: #FAFAFA;
     --nav-bg-color: #ffffff;
     --nav-shadow-color: #ece7e7;
+    --btn-hover: #E9E8E8;
 }
