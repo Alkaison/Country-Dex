@@ -10,3 +10,21 @@ body {
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 300;
 }
+.App {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+/* Global Variables */
+:root {
+    --text-color: #ffffff;
+    --bg-color: #202D36;
+    --nav-bg-color: #2B3743;
+    --nav-shadow-color: #1E2B34;
+}
+.lightMode {
+    --text-color: #000000;
+    --bg-color: #FAFAFA;
+    --nav-bg-color: #ffffff;
+    --nav-shadow-color: #ece7e7;
+}
