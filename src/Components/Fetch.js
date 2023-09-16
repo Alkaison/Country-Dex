@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
+import Filterdata from "./Filterdata";
 import Spinner from "./Spinner";
-import CountryCard from "./CountryCard";
 import "../Styles/Fetch.css";
 
 function Fetch() {
@@ -41,7 +41,7 @@ function Fetch() {
         {loading ? (
           <Spinner />
         ) : (
-          apiData.map((country, index) => <CountryCard key={index} flag={country.flags.png} name={country.name.common} population={country.population} region={country.region} capital={country.capital}  />)
+          <Filterdata apiData={apiData} />
         )}
       </div>
     </section>
