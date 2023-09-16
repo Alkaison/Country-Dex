@@ -1,0 +1,14 @@
+.spinner-loading {
+    height: 75vh;
+    padding: 64px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+/* Responsive */
+@media screen and (max-width: 678px) {
+    .spinner-loading {
+        padding: 40px 16px;
+    }
+}
