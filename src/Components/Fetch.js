@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Spinner from "./Spinner";
 import CountryCard from "./CountryCard";
-import "../Styles/MainBody.css";
+import "../Styles/Fetch.css";
 
-function MainBody() {
+function Fetch() {
   const [apiData, setApiData] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -48,4 +48,4 @@ function MainBody() {
   );
 }
 
-export default MainBody;
+export default Fetch;
