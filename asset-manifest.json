@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Country-Dex/static/css/main.7e81f352.css",
+    "main.js": "/Country-Dex/static/js/main.2a5fc753.js",
+    "index.html": "/Country-Dex/index.html",
+    "main.7e81f352.css.map": "/Country-Dex/static/css/main.7e81f352.css.map",
+    "main.2a5fc753.js.map": "/Country-Dex/static/js/main.2a5fc753.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7e81f352.css",
+    "static/js/main.2a5fc753.js"
+  ]
+}
