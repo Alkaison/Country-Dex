@@ -13,6 +13,9 @@
     flex-wrap: wrap;
     gap: 64px;
 }
+.main-body-container a {
+    text-decoration: none;
+}
 /* Country Card */
 .country-card {
     width: 300px;
