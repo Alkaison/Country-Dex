@@ -6,7 +6,6 @@
     align-items: center;
     color: var(--text-color);
     background-color: var(--nav-bg-color);
-    box-shadow: 2px 2px 2px var(--nav-shadow-color);
 }
 .navbar-title {
     letter-spacing: .5px;

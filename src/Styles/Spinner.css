@@ -1,5 +1,6 @@
 .spinner-loading {
-    height: 90vh;
+    height: 90dvh;
+    max-height: 90vh;
     padding: 64px 40px;
     display: flex;
     justify-content: center;

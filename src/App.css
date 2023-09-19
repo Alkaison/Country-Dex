@@ -16,12 +16,12 @@ body {
 }
 
 /* Global Variables */
-:root {
+.darkMode {
     --text-color: #ffffff;
     --bg-color: #202D36;
     --nav-bg-color: #2B3743;
     --nav-shadow-color: #1E2B34;
-    --btn-hover: #202D36;
+    --btn-hover: #21292f;
 }
 .lightMode {
     --text-color: #000000;
