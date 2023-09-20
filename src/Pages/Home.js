@@ -7,7 +7,7 @@ export const SearchContext = createContext();
 function Home() {
   const [apiData, setApiData] = useState(null);
   const [userInput, setUserInput] = useState("");
-  const [apiError, setApiError] = useState(false);
+  const [apiError, setApiError] = useState(null);
   const [regionChoice, setRegionChoice] = useState("");
 
   return (

@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import Filterdata from "./Filterdata";
-import NotInternet from "./NotInternet";
+import Error from "./Error";
 import Spinner from "./Spinner";
 import { SearchContext } from "../Pages/Home";
 import "../Styles/Fetch.css";
@@ -27,8 +27,11 @@ function Fetch() {
       })
       .catch((error) => {
         if (isMounted) {
-          console.log(`Fetch API Error: ${error}`);
-          setApiError(true);
+          if (error.message === "Failed to fetch") {
+            setApiError("No internet connection. Please check your network.");
+          } else {
+            setApiError("An error occurred while fetching data from the API.");
+          }
           setLoading(false);
         }
       });
@@ -42,7 +45,7 @@ function Fetch() {
     <section className="main-body-section">
       <div className="main-body-container">
         {loading && <Spinner />}
-        {!loading && apiError && <NotInternet />}
+        {!loading && apiError && <Error error={apiError} />}
         {!loading && !apiError && <Filterdata />}
       </div>
     </section>
