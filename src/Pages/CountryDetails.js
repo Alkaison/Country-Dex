@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { IoArrowBack } from "react-icons/io5";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import Spinner from "../Components/Spinner";
 import "../Styles/CountryDetails.css";
 
@@ -15,9 +15,12 @@ function CountryDetails() {
   const fetchCurrencies = (name) => Object.values(name).map(currencies => `${currencies.name} (${currencies.symbol})`);
 
   useEffect(() => {
+    setLoading(true);
+    
     let isMounted = true;
+    const fetchUrl = country.length === 3 ? `https://restcountries.com/v3.1/alpha/${country}` : `https://restcountries.com/v3.1/name/${country}?fullText=true`;
 
-    fetch(`https://restcountries.com/v3.1/name/${country}?fullText=true`)
+    fetch(fetchUrl)
       .then((response) => {
         if (!response.ok)
           throw new Error(`HTTP error! Status: ${response.status}`);
@@ -27,7 +30,6 @@ function CountryDetails() {
       .then((data) => {
         if (isMounted) {
           setApiData(data[0]);
-          // console.log(data[0]);
           setLoading(false);
         }
       })
@@ -109,7 +111,7 @@ function CountryDetails() {
 
             <div className="country-border">
               {apiData.borders && <p><strong>Border Countries: </strong></p>}
-              {apiData.borders ? apiData.borders.map((record, index) => <span key={index} className="country-border-name">{record}</span>) : <span className="no-countries">No Borders for this country...!</span>}
+              {apiData.borders ? apiData.borders.map((record, index) => <Link to={`/${record}`} key={index}><span className="country-border-name">{record}</span></Link>) : <span className="no-countries">There are no neighboring countries sharing a border with it.</span>}
             </div>
           </div>
         </div>
