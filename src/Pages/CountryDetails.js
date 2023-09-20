@@ -108,10 +108,8 @@ function CountryDetails() {
             </div>
 
             <div className="country-border">
-              <p>
-                {apiData.borders && <strong>Border Countries: </strong>}
-                {apiData.borders ? apiData.borders.map((record, index) => <span key={index} className="country-border-name">{record}</span>) : <span className="no-countries">No Borders for this country...!</span>}
-              </p>
+              {apiData.borders && <p><strong>Border Countries: </strong></p>}
+              {apiData.borders ? apiData.borders.map((record, index) => <span key={index} className="country-border-name">{record}</span>) : <span className="no-countries">No Borders for this country...!</span>}
             </div>
           </div>
         </div>
