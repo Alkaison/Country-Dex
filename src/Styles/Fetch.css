@@ -8,10 +8,10 @@
 }
 .main-body-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 64px;
+    gap: 40px;
 }
 .main-body-container a {
     text-decoration: none;
@@ -60,6 +60,11 @@
     letter-spacing: .5px;
 }
 /* Responsive */
+@media screen and (max-width: 720px) {
+    .main-body-container {
+        justify-content: center;
+    }
+}
 @media screen and (max-width: 678px) {
     .main-body-section {
         padding: 40px 16px;
