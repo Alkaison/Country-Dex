@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# Country Dex - Explore Countries of the Earth 🌍
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Country Dex web app project! This application allows you to explore information about all countries on Earth, providing a rich and interactive experience. Whether you're looking for general country information, detailed statistics, or just want to admire the flags of different nations, Country Dex has got you covered. Try now: [click here](https://alkaison.github.io/Country-Dex)
 
-## Available Scripts
+[![Country Dex Screenshot](https://i.postimg.cc/MHDk8sNB/CD-1.png)](https://alkaison.github.io/Country-Dex)
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Theme Toggle](#theme-toggle)
+- [Screenshots](#screenshots)
+- [Contributing](#contributing)
+- [License](#license)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Country Information
+- Access detailed information about all countries, including their flags, names, and stats overviews.
+- Search for a specific country by its name using the search input field.
+- Filter countries by regions using the region filter.
+- Combine region filtering and search to refine your results.
 
-### `npm test`
+### Detailed Country View
+- Click on a country to view more comprehensive details about it, including its population, region, capital, languages, currencies, and neighboring countries.
+- Explore bordering countries by clicking on their names.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Responsive Design
+- Enjoy an optimal user interface layout on various screen sizes, making it accessible on both desktop and mobile devices.
 
-### `npm run build`
+### Interactive Elements
+- Experience hover and focus states for all interactive elements on the page for a more engaging user experience.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Dark/Light Theme Toggle
+- Customize your browsing experience by toggling between dark and light themes.
+- Your preference is stored in local storage for a seamless experience on your next visit.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies Used
+- React.js
+- Vanilla CSS
+- React Icons
+- React Router DOM
+- React Loader Spinner
+- GH-Pages
+- [REST Countries API (v3.1)](https://restcountries.com/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
+To get started with the Country Dex project on your local machine, follow these steps:
 
-### `npm run eject`
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Alkaison/Country-Dex.git
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Change directory to the project folder:
+   ```bash
+   cd country-dex
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Start the development server:
+   ```bash
+   npm start
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+5. Open your web browser and access the app at `http://localhost:3000/Country-Dex`.
 
-## Learn More
+## Usage
+- Visit the home page to see a list of all countries along with their flags and basic information.
+- Use the search input field to find a specific country by name.
+- Filter countries by region using the region filter dropdown.
+- Click on a country card to view more detailed information on a separate page.
+- On the detailed country page, click on bordering countries names to explore more.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Theme Toggle
+- Toggle between dark and light themes using the theme switcher located in the header.
+- Your theme preference will be saved in local storage for your next visit.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Screenshots
 
-### Code Splitting
+### Home Page
+![Dark Theme](https://i.postimg.cc/MHDk8sNB/CD-1.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Country Details
+![Detailed Country View](https://i.postimg.cc/kG9rzr19/CD-2.png)
 
-### Analyzing the Bundle Size
+## Contributing
+Contributions to this project are welcome! Feel free to open issues or submit pull requests to improve the application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## License
+This project is licensed under the [MIT License](LICENSE).
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you for exploring the world with us! 🌎🌏🌍
