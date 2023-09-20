@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Filterdata from "./Filterdata";
+import NotInternet from "./NotInternet";
 import Spinner from "./Spinner";
+import { SearchContext } from "../Pages/Home";
 import "../Styles/Fetch.css";
 
 function Fetch() {
-  const [apiData, setApiData] = useState(null);
+  const { setApiData, apiError, setApiError } = useContext(SearchContext);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -26,6 +28,7 @@ function Fetch() {
       .catch((error) => {
         if (isMounted) {
           console.log(`Fetch API Error: ${error}`);
+          setApiError(true);
           setLoading(false);
         }
       });
@@ -33,16 +36,14 @@ function Fetch() {
     return () => {
       isMounted = false;
     };
-  }, []);
+  }, [setApiData, setApiError]);
 
   return (
     <section className="main-body-section">
       <div className="main-body-container">
-        {loading ? (
-          <Spinner />
-        ) : (
-          <Filterdata apiData={apiData} />
-        )}
+        {loading && <Spinner />}
+        {!loading && apiError && <NotInternet />}
+        {!loading && !apiError && <Filterdata />}
       </div>
     </section>
   );

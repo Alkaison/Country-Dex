@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { BiSearchAlt } from "react-icons/bi";
+import { SearchContext } from "../Pages/Home";
 import "../Styles/Filter.css";
 
 function Filter() {
-  const [userInput, setUserInput] = useState("");
-  const [regionChoice, setRegionChoice] = useState("");
+  const { userInput, setUserInput, regionChoice, setRegionChoice } =
+    useContext(SearchContext);
 
   const handleUserInput = (event) => {
     setUserInput(event.target.value);
@@ -39,7 +40,7 @@ function Filter() {
           onClick={handleRegionChoice}
         >
           <li value="Africa">Africa</li>
-          <li value="America">America</li>
+          <li value="Americas">Americas</li>
           <li value="Asia">Asia</li>
           <li value="Europe">Europe</li>
           <li value="Oceania">Oceania</li>
