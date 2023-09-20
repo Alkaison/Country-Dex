@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { IoArrowBack } from "react-icons/io5";
 import { useParams, useNavigate, Link } from "react-router-dom";
+import Error from "../Components/Error";
 import Spinner from "../Components/Spinner";
 import "../Styles/CountryDetails.css";
 
@@ -10,12 +11,15 @@ function CountryDetails() {
   const { country } = useParams();
   const [apiData, setApiData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const fetchNativeNames = (name) => Object.values(name.nativeName).map(language => language.common);
   const fetchCurrencies = (name) => Object.values(name).map(currencies => `${currencies.name} (${currencies.symbol})`);
 
   useEffect(() => {
+    // start loading screen and clear previous errors
     setLoading(true);
+    setError(null);
     
     let isMounted = true;
     const fetchUrl = country.length === 3 ? `https://restcountries.com/v3.1/alpha/${country}` : `https://restcountries.com/v3.1/name/${country}?fullText=true`;
@@ -35,7 +39,11 @@ function CountryDetails() {
       })
       .catch((error) => {
         if (isMounted) {
-          console.log(`Fetch API Error: ${error}`);
+          if (error.message === "Failed to fetch") {
+            setError("No internet connection. Please check your network.");
+          } else {
+            setError("An error occurred while fetching data from the API.");
+          }
           setLoading(false);
         }
       });
@@ -60,7 +68,7 @@ function CountryDetails() {
 
       {loading ? (
         <Spinner />
-      ) : (
+      ) : error ? <Error error={error} /> : (
         <div className="countryInfoSection">
           <div className="countryFlag-container">
             <img src={apiData.flags.png} alt={`${apiData.name.common} Flag`} />

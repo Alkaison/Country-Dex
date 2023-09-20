@@ -1,11 +1,11 @@
 import React from "react";
 
-function NotInternet() {
+function Error({error}) {
   return (
     <div style={{ color: "red", fontSize: "20px", textAlign: "center" }}>
-      <p>Internet connection not found, please try again later.</p>
+      <p>{error}</p>
     </div>
   );
 }
 
-export default NotInternet;
+export default Error;
