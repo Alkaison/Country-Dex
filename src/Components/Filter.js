@@ -39,6 +39,7 @@ function Filter() {
           className={`options`}
           onClick={handleRegionChoice}
         >
+          <li value="">All</li>
           <li value="Africa">Africa</li>
           <li value="Americas">Americas</li>
           <li value="Asia">Asia</li>
