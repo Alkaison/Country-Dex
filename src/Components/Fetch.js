@@ -43,11 +43,9 @@ function Fetch() {
 
   return (
     <section className="main-body-section">
-      <div className="main-body-container">
-        {loading && <Spinner />}
-        {!loading && apiError && <Error error={apiError} />}
-        {!loading && !apiError && <Filterdata />}
-      </div>
+      {loading && <div className="main-body-error"><Spinner /></div>}
+      {!loading && apiError && <div className="main-body-error"><Error error={apiError} /></div>}
+      {!loading && !apiError && <div className="main-body-container"><Filterdata /></div>}
     </section>
   );
 }

@@ -16,6 +16,9 @@
 .main-body-container a {
     text-decoration: none;
 }
+.main-body-error {
+    width: 100%;
+}
 /* Country Card */
 .country-card {
     width: 300px;
