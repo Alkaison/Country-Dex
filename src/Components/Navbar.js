@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BsFillMoonFill, BsMoon } from "react-icons/bs";
+import { Link } from "react-router-dom";
 import "../Styles/Navbar.css";
 
 function Navbar() {
@@ -27,7 +28,7 @@ function Navbar() {
 
   return (
     <nav className="navbar-section">
-      <h1 className="navbar-title">Where in the world?</h1>
+      <h1 className="navbar-title"><Link to="/">Country Dex</Link></h1>
       <button className="navbar-btn" type="button" onClick={updateTheme}>
         {theme === "dark" ? <BsFillMoonFill /> : <BsMoon />} {theme === "dark" ? "Dark" : "Light"} Mode
       </button>

@@ -10,6 +10,10 @@
 .navbar-title {
     letter-spacing: .5px;
 }
+.navbar-title a {
+    text-decoration: none;
+    color: var(--text-color);
+}
 .navbar-btn {
     padding: 10px 12px;
     display: flex;
