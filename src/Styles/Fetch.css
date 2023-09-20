@@ -2,8 +2,8 @@
     min-height: 100vh;
     padding: 32px 40px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     background-color: var(--bg-color);
 }
 .main-body-container {
