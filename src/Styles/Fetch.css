@@ -27,6 +27,10 @@
     border-radius: 8px;
     background-color: var(--nav-bg-color);
     box-shadow: 2px 2px 2px var(--btn-hover), -2px -2px 2px var(--btn-hover), 2px -2px 2px var(--btn-hover), -2px 2px 2px var(--btn-hover);
+    transition: transform .3s ease;
+}
+.country-card:hover {
+    transform: scale(1.04);
 }
 .ctd-img {
     width: 300px;
