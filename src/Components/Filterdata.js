@@ -64,7 +64,14 @@ function Filterdata() {
 
   if (renderedContent.length === 0) {
     renderedContent = (
-      <div style={{ color: "red", fontSize: "20px", textAlign: "center", letterSpacing: "0.7px" }}>
+      <div
+        style={{
+          color: "red",
+          fontSize: "20px",
+          textAlign: "center",
+          letterSpacing: "0.7px",
+        }}
+      >
         <p>
           Not Country found matching your input or filter, please try something
           different.

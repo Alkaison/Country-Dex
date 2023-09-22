@@ -3,6 +3,7 @@ import { IoArrowBack } from "react-icons/io5";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import Error from "../Components/Error";
 import Spinner from "../Components/Spinner";
+import { findCountryName } from "../Components/CountryCodes";
 import "../Styles/CountryDetails.css";
 
 function CountryDetails() {
@@ -81,7 +82,7 @@ function CountryDetails() {
       ) : (
         <div className="countryInfoSection">
           <div className="countryFlag-container" data-aos="fade-right">
-            <img src={apiData.flags.png} alt={`${apiData.name.common} Flag`} />
+            <img src={apiData.flags.png} alt={`${apiData.name.common} Flag`} title={`${apiData.name.common} Flag`} />
           </div>
 
           <div className="countryStats-container" data-aos="fade-left">
@@ -158,11 +159,14 @@ function CountryDetails() {
                 </p>
               )}
               {apiData.borders ? (
-                apiData.borders.map((record, index) => (
-                  <Link to={`/${record}`} key={index}>
-                    <span className="country-border-name">{record}</span>
-                  </Link>
-                ))
+                apiData.borders.map((record, index) => {
+                  const countryName = findCountryName(record);
+                  return (
+                    <Link to={`/${record}`} key={index} title={countryName}>
+                      <span className="country-border-name">{countryName}</span>
+                    </Link>
+                  );
+                })
               ) : (
                 <span className="no-countries">
                   There are no neighboring countries sharing a border with it.
