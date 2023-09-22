@@ -37,13 +37,14 @@ Welcome to the Country Dex web app project! This application allows you to explo
 - Customize your browsing experience by toggling between dark and light themes.
 - Your preference is stored in local storage for a seamless experience on your next visit.
 
-## Technologies Used
+## Technologies/Library Used
 - React.js
 - Vanilla CSS
 - React Icons
 - React Router DOM
 - React Loader Spinner
 - GH-Pages
+- Animate on Scroll
 - [REST Countries API (v3.1)](https://restcountries.com/)
 
 ## Getting Started
