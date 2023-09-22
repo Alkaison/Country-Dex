@@ -71,6 +71,10 @@
 }
 @media screen and (max-width: 678px) {
     .main-body-section {
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .main-body-section {
         padding: 40px 16px;
     }
 }
