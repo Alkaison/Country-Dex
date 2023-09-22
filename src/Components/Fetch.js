@@ -45,7 +45,7 @@ function Fetch() {
     <section className="main-body-section">
       {loading && <div className="main-body-error"><Spinner /></div>}
       {!loading && apiError && <div className="main-body-error"><Error error={apiError} /></div>}
-      {!loading && !apiError && <div className="main-body-container"><Filterdata /></div>}
+      {!loading && !apiError && <div className="main-body-container" data-aos="fade-up"><Filterdata /></div>}
     </section>
   );
 }

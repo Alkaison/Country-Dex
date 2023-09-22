@@ -55,7 +55,7 @@ function CountryDetails() {
 
   return (
     <section className="country-details-section">
-      <div className="back-btn-container">
+      <div className="back-btn-container" data-aos="fade-right">
         <button
           type="button"
           onClick={() => {
@@ -70,11 +70,11 @@ function CountryDetails() {
         <Spinner />
       ) : error ? <Error error={error} /> : (
         <div className="countryInfoSection">
-          <div className="countryFlag-container">
+          <div className="countryFlag-container" data-aos="fade-right">
             <img src={apiData.flags.png} alt={`${apiData.name.common} Flag`} />
           </div>
 
-          <div className="countryStats-container">
+          <div className="countryStats-container" data-aos="fade-left">
             <p className="country-title">{apiData.name.common}</p>
 
             <div className="country-details">

@@ -1,11 +1,21 @@
-import "./App.css";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
 import CountryDetails from "./Pages/CountryDetails";
 import NotFound from "./Pages/NotFound";
+import AOS from "aos";
+import "./App.css";
+import "aos/dist/aos.css";
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      offset: 50,
+      duration: 500,
+    });
+  }, []);
+
   return (
     <Router basename="/Country-Dex">
       <div className="App">

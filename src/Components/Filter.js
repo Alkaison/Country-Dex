@@ -19,7 +19,7 @@ function Filter() {
 
   return (
     <section className="filter-results-container">
-      <div className="filter-input">
+      <div className="filter-input" data-aos="fade-right">
         <input
           type="text"
           placeholder="Search for a country ..."
@@ -31,7 +31,7 @@ function Filter() {
         <BiSearchAlt id="searchIcon" />
       </div>
 
-      <div className="custom-dropdown">
+      <div className="custom-dropdown" data-aos="fade-left">
         <div className="selected-option">
           {regionChoice === "" ? "Filter by Region" : regionChoice}
         </div>
