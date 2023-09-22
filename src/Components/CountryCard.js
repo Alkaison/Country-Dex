@@ -13,15 +13,15 @@ function CountryCard(props) {
           <p className="ctd-title">{props.name}</p>
           <p className="ctd-desc">
             <strong>Population: </strong>
-            {(props.population).toLocaleString()}
+            {props.population ? (props.population).toLocaleString() : <span>--</span>}
           </p>
           <p className="ctd-desc">
             <strong>Region: </strong>
-            {props.region}
+            {props.region ? props.region : <span>--</span>}
           </p>
           <p className="ctd-desc">
             <strong>Capital: </strong>
-            {props.capital}
+            {props.capital ? props.capital : <span>--</span>}
           </p>
         </div>
       </div>
